@@ -1,0 +1,3 @@
+<TextView ux:Class="Muistio.TextView" TextColor="White" CaretColor="White" Padding="5">
+	<Rectangle Layer="Background" Color="#FFF2" CornerRadius="4" />
+</TextView>

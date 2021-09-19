@@ -1,0 +1,29 @@
+<Page ux:Class="SplashPage">
+	<Router ux:Dependency="router" />
+
+	<iOSFingerPrint ux:Global="FingerPrint" />
+
+	<JavaScript File="SplashPage.js" />
+
+	<DockPanel ClipToBounds="true">
+		<Video Layer="Background" File="../Assets/trees1.mp4" Opacity="0.8" AutoPlay="true" IsLooping="true" StretchMode="UniformToFill">
+			<Blur Radius="2.5" />
+		</Video>
+
+		<Grid RowCount="2">
+			<StackPanel Alignment="VerticalCenter">
+				<Muistio.Text Alignment="HorizontalCenter" FontSize="70">
+					<Font File="../Assets/SansForgetica-Regular.otf" />
+					<Muistio.Shadow />
+					Müistiö
+				</Muistio.Text>
+				<Muistio.Text Alignment="HorizontalCenter" Opacity="0.5">
+					<Muistio.Shadow />
+					kaikki müistiin
+				</Muistio.Text>
+			</StackPanel>
+
+			<Muistio.Button Text="Aüthenticate" FontSize="18" Margin="50,0" Alignment="VerticalCenter" Clicked="{authenticate}" />
+		</Grid>
+	</DockPanel>
+</Page>

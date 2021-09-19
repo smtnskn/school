@@ -1,0 +1,12 @@
+<Panel ux:Class="Muistio.Button" Margin="5" Padding="10" FontSize="16">
+	<string ux:Property="Text" />
+	<float ux:Property="FontSize" />
+
+	<Rectangle Layer="Background" Color="#485859" CornerRadius="4">
+		<Muistio.Shadow />
+	</Rectangle>
+
+	<Muistio.Text Value="{ReadProperty Text}" FontSize="{ReadProperty FontSize}" TextAlignment="Center" />
+
+	<Muistio.Anim.Pressed />
+</Panel>

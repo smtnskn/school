@@ -1,0 +1,49 @@
+<Muistio.Page ux:Class="HomePage">
+	<Router ux:Dependency="router" />
+
+	<JavaScript File="HomePage.js" />
+
+	<DockPanel>
+		<WhileEmpty Items="{entries}">
+			<StackPanel ux:Name="emptyView" Alignment="Center" ItemSpacing="20">
+				<Text Alignment="Center" FontSize="20">Nothing to see here</Text>
+				<Text Alignment="Center">Add a note using the button below</Text>
+
+				<AddingAnimation>
+					<Change emptyView.Opacity="0" Duration="0.2" />
+					<Scale Factor="0.4" Duration="0.4" Easing="CubicInOut" />
+				</AddingAnimation>
+
+				<RemovingAnimation>
+					<Change emptyView.Opacity="0" Duration="0.2" />
+				</RemovingAnimation>
+			</StackPanel>
+		</WhileEmpty>
+
+		<ScrollView>
+			<StackPanel>
+				<Rectangle ux:Class="Separator" Height="1" Fill="#FFF4" />
+
+				<Each Items="{entries}">
+					<Separator />
+
+					<Panel HitTestMode="LocalBoundsAndChildren" Clicked="{goToEntry}">
+						<StackPanel ItemSpacing="2" Margin="6">
+							<Muistio.TitleText Alignment="HorizontalCenter" Value="{date} / {time}" />
+							<Muistio.Text Value="{note}" />
+						</StackPanel>
+
+						<Muistio.Anim.Pressed />
+					</Panel>
+				</Each>
+
+				<Separator />
+
+			</StackPanel>
+		</ScrollView>
+
+		<Panel Dock="Bottom">
+			<Muistio.Button Text="Add note" Clicked="{goToAddNote}" />
+		</Panel>
+	</DockPanel>
+</Muistio.Page>

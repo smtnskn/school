@@ -1,0 +1,19 @@
+<Muistio.Page ux:Class="AddEntryPage">
+	<Router ux:Dependency="router" />
+
+	<JavaScript File="AddEntryPage.js" />
+
+	<DockPanel>
+		<ScrollView>
+			<StackPanel Padding="10" ItemSpacing="5">
+				<Muistio.TitleText Value=" Entry:" />
+				<Muistio.TextView Value="{note}" TextWrapping="Wrap" />
+			</StackPanel>
+		</ScrollView>
+
+		<Grid ColumnCount="2" Dock="Bottom">
+			<Muistio.Button Text="Save" Clicked="{save}" />
+			<Muistio.Button Text="Cancel" Clicked="{cancel}" />
+		</Grid>
+	</DockPanel>
+</Muistio.Page>

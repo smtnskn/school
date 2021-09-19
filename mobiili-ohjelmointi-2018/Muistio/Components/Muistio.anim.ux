@@ -1,0 +1,3 @@
+<WhilePressed ux:Class="Muistio.Anim.Pressed">
+	<Scale Factor="0.925" Duration="0.1" Easing="BackOut" EasingBack="BackIn" />
+</WhilePressed>

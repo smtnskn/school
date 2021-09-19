@@ -1,0 +1,60 @@
+<Muistio.Page ux:Class="EditEntryPage">
+	<Router ux:Dependency="router" />
+
+	<JavaScript File="EditEntryPage.js" />
+
+	<!-- Place on top of all others, serves as root for modal -->
+	<Panel ux:Name="FullWindow" Layer="Overlay"/>
+	<ResourceObject Key="FullWindow" Value="FullWindow"/>
+
+	<DockPanel>
+		<ScrollView>
+			<StackPanel Padding="10">
+				<StackPanel>
+					<Muistio.Text Alignment="HorizontalCenter" Value="{date} / {time}" />
+				</StackPanel>
+
+				<StackPanel ItemSpacing="5">
+					<Muistio.TitleText Value=" Entry:" />
+					<Muistio.TextView Value="{note}" TextWrapping="Wrap" />
+				</StackPanel>
+			</StackPanel>
+		</ScrollView>
+
+		<Grid ColumnCount="3" Dock="Bottom">
+			<Muistio.Button Text="Update" Clicked="{update}" />
+			<Muistio.Button Text="Delete">
+				<Clicked>
+					<Set ModalConfirm.IsEnabled="true"/>
+				</Clicked>
+			</Muistio.Button>
+			<Muistio.Button Text="Cancel" Clicked="{cancel}" />
+		</Grid>
+	</DockPanel>
+
+	<!-- Modal -->
+	<AlternateRoot ux:Name="ModalConfirm" IsEnabled="false" ParentNode="{Resource FullWindow}">
+		<Panel Color="0.1, 0.1, 0.1, 0.6">
+			<StackPanel Alignment="Center" Padding="10">
+				<Rectangle Layer="Background" Color="1, 1, 1, 1" CornerRadius="4">
+					<Muistio.Shadow />
+				</Rectangle>
+
+				<Text>Confirm deletion?</Text>
+
+				<Grid ColumnCount="2" Margin="5">
+					<Muistio.Button Text="Yes" Clicked="{delete}">
+						<Clicked>
+							<Set ModalConfirm.IsEnabled="false" />
+						</Clicked>
+					</Muistio.Button>
+					<Muistio.Button Text="No">
+						<Clicked>
+							<Set ModalConfirm.IsEnabled="false" />
+						</Clicked>
+					</Muistio.Button>
+				</Grid>
+			</StackPanel>
+		</Panel>
+	</AlternateRoot>
+</Muistio.Page>

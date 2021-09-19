@@ -1,0 +1,22 @@
+<App Background="#022328">
+	<!-- <StatusBarBackground Dock="Top" /> -->
+	<iOS.StatusBarConfig Style="Light" />
+	<Android.StatusBarConfig Color="#023328" />
+
+	<!-- <Image Layer="Background" File="./Assets/background.jpg" StretchMode="UniformToFill" Opacity="0.7" /> -->
+
+	<Video Layer="Background" File="./Assets/trees1.mp4" Opacity="0.4" AutoPlay="true" IsLooping="true" StretchMode="UniformToFill">
+		<Blur Radius="15" />
+	</Video>
+
+	<Router ux:Name="router" />
+
+	<ClientPanel>
+		<Navigator DefaultPath="splash">
+			<SplashPage ux:Template="splash" router="router" />
+			<HomePage ux:Template="home" router="router" />
+			<EditEntryPage ux:Template="editEntry" router="router" />
+			<AddEntryPage ux:Template="addEntry" router="router" />
+		</Navigator>
+	</ClientPanel>
+</App>

@@ -10,7 +10,7 @@ http://terokarvinen.com/2020/go-programming-course-2020-w22/
 
 **License:** GPL2
 
-**Source code:** https://github.com/smtnsk/go-course/blob/master/go-2020/assignments/project/greyscaler.go
+**Source code:** https://github.com/smtnskn/school/blob/main/go-2020/assignments/project/greyscaler.go
 
 ---
 
@@ -18,9 +18,9 @@ http://terokarvinen.com/2020/go-programming-course-2020-w22/
 
 All binaries are 64-bit.
 
-* Windows: https://github.com/smtnsk/go-course/raw/master/go-2020/assignments/project/greyscaler-win.exe
-* Linux: https://github.com/smtnsk/go-course/raw/master/go-2020/assignments/project/greyscaler-linux
-* Mac: https://github.com/smtnsk/go-course/raw/master/go-2020/assignments/project/greyscaler-mac
+* Windows: https://github.com/smtnskn/school/raw/main/go-2020/assignments/project/greyscaler-win.exe
+* Linux: https://github.com/smtnskn/school/raw/main/go-2020/assignments/project/greyscaler-linux
+* Mac: https://github.com/smtnskn/school/raw/main/go-2020/assignments/project/greyscaler-mac
 
 ---
 

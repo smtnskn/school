@@ -29,7 +29,7 @@ Lähteet:
 * https://stackoverflow.com/a/41741702
 * https://www.joeshaw.org/dont-defer-close-on-writable-files/
 
-Lähdekoodi: https://github.com/smtnsk/go-course/blob/master/go-2020/assignments/day-3/sort-file.go
+Lähdekoodi: https://github.com/smtnskn/school/blob/main/go-2020/assignments/day-3/sort-file.go
 
 Esimerkki toiminnasta:\
 ![screenshot-1](/go-2020/assignments/day-3/screenshots/sort-file.png)
